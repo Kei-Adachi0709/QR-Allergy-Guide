@@ -1,0 +1,13 @@
+{
+    "name": "PWA Test",
+    "short_name": "PWA",
+    "display": "standalone",
+    "icons": [{
+        "src": "/images/food-cake.png",
+        "sizes": "256x256",
+        "type": "image/png"
+      }],
+    "start_url": "index.html"
+  }
+
+  

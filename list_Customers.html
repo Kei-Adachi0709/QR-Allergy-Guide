@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex" />
+  <!--Firebase JavaScript SDK-->
+  <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-messaging.js"></script>
+
+  <link rel="stylesheet" href="css/list_Customers_phon.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/list_Customers_pc.css">
+  <title>一覧</title>
+</head>
+
+<body>
+  <form action="#" id="searchKw" class="search-form-006">
+    <label>
+      <input type="text" placeholder="キーワードを入力">
+    </label>
+    <button type="submit" aria-label="検索"></button>
+  </form>
+
+  <div class="allergy">
+    <div id="allergyJump"></div>
+    <h2 id="textLine">アレルゲン・苦手な食べ物</h2>
+    <p>アレルゲン物質をお選びください</p>
+    <p>※選択したものは検索から除外されます</p>
+    <form class="searchForm">
+      <div class="checkbox-group">
+        <label>
+          <input type="checkbox" id="wheat" name="selectFood" value="小麦" />小麦
+        </label>
+        <label>
+          <input type="checkbox" id="egg" name="selectFood" value="卵" />卵
+        </label>
+        <label>
+          <input type="checkbox" id="milk" name="selectFood" value="乳" />乳
+        </label>
+        <label>
+          <input type="checkbox" id="shrimp" name="selectFood" value="エビ" />エビ
+        </label>
+        <label>
+          <input type="checkbox" id="crab" name="selectFood" value="カニ" />カニ
+        </label>
+        <label>
+          <input type="checkbox" id="soba" name="selectFood" value="そば" />そば
+        </label>
+        <label>
+          <input type="checkbox" id="walnut" name="selectFood" value="くるみ" />くるみ
+        </label>
+        <label>
+          <input type="checkbox" id="peanut" name="selectFood" value="落花生" />落花生
+        </label>
+      </div>
+      <!--検索ボタン-->
+      <button id="searchBtn" type="button" onclick="search()">検索</button>
+    </form>
+  </div>
+  <h2>商品一覧</h2>
+  <div class="foodListContainer">
+    <div id="productJump"></div>
+    
+  </div>
+
+
+
+ 
+  <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-storage.js"></script>
+  <script src="js/jquery-3.7.0.min.js"></script>
+  <script src="js/humburuger.js"></script>
+  <script src="js/list_Customers.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/registration.css">
+    <title>登録画面</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="outbtn">
+            <button id="back">＜</button>
+        </div>
+        <h1>新規登録</h1>
+    </div>
+    <div id="content">
+        <h3>商品名</h3>
+        <input type="text" id="goodsName">
+        <p id="error"></p>
+        <h3>商品画像</h3>
+        <!-- <div id="app">
+		<div class="file-upload">
+			<input type="file" ref="fileInput" @change="handleFileChange"  class="file-input" style="display: none;">
+			<div class="drop-area" @dragover.prevent @drop="handleDrop">
+				<button @click="$refs.fileInput.click()" class="file-select-button">ファイルを選択</button>
+				ドラッグ＆ドロップするか、ファイルを選択してください
+			</div>
+		</div>
+		<div class="file-preview" v-if="file">
+			<p><strong>選択したファイル:</strong> {{ file.name }}</p>
+			<p><strong>ファイルタイプ:</strong> {{ file.type }}</p>
+			<p><strong>ファイルサイズ:</strong> {{ formatSize(file.size) }}</p>
+		</div>
+	</div> -->
+
+        <input type="file" id="file-input1" /><br>
+        <img id="goodsPreview" style="max-width: 300px; margin-top: 20px;" />
+
+        <h3>商品の説明</h3>
+        <input type="text" id="description">
+        <h3>栄養成分表示</h3>
+        <input type="text" id="component">
+        <h3>注意書き</h3>
+        <input type="text" id="notes">
+        <h3>レンジの温め時間</h3>
+        <input type="text" id="warmMinutes">分
+        <input type="text" id="warmSecond">秒
+        <h3>販売元</h3>
+        <input type="text" id="seller">
+        <h3>カテゴリ名</h3>
+        <select id="category">
+            <option value="惣菜">惣菜</option>
+            <option value="飲料">飲料</option>
+            <option value="冷凍食品">冷凍食品</option>
+            <option value="乳製品">乳製品</option>
+            <option value="お菓子類">お菓子類</option>
+            <option value="肉製品">肉製品</option>
+            <option value="穀物製品">穀物製品</option>
+            <option value="パン製品">パン製品</option>
+        </select>
+        <h3>原材料ごとの産地</h3>
+        <div id="materialsList">
+            <ol>
+                <ul>・原材料名<br>
+                    <input type="text" id="material">
+                </ul>
+                <ul>・産地<br>
+                    <input type="text" id="productionArea">
+                </ul>
+            </ol>
+        </div>
+        <button id="plusButton">＋</button>
+
+        <h3>アレルゲン</h3>
+        <label><input type="checkbox" id="allergy1" name="allergy" value="小麦">小麦</label><br>
+        <label><input type="checkbox" id="allergy2" name="allergy" value="卵">卵</label><br>
+        <label><input type="checkbox" id="allergy3" name="allergy" value="乳">乳</label><br>
+        <label><input type="checkbox" id="allergy4" name="allergy" value="えび">えび</label><br>
+        <label><input type="checkbox" id="allergy5" name="allergy" value="かに">かに</label><br>
+        <label><input type="checkbox" id="allergy6" name="allergy" value="そば">そば</label><br>
+        <label><input type="checkbox" id="allergy7" name="allergy" value="くるみ">くるみ</label><br>
+        <label><input type="checkbox" id="allergy8" name="allergy" value="落花生">落花生</label><br>
+
+        <!-- <h3>栄養成分のグラフ</h3> -->
+        <!-- <div id="app">
+		<div class="file-upload">
+			<input type="file" ref="fileInput" @change="handleFileChange"  class="file-input" style="display: none;">
+			<div class="drop-area" @dragover.prevent @drop="handleDrop">
+				<button @click="$refs.fileInput.click()" class="file-select-button">ファイルを選択</button>
+				ドラッグ＆ドロップするか、ファイルを選択してください
+			</div>
+		</div>
+		<div class="file-preview" v-if="file">
+			<p><strong>選択したファイル:</strong> {{ file.name }}</p>
+			<p><strong>ファイルタイプ:</strong> {{ file.type }}</p>
+			<p><strong>ファイルサイズ:</strong> {{ formatSize(file.size) }}</p>
+		</div>
+	</div> -->
+
+        <!-- <input type="file" id="file-input2" /><br>
+        <img id="graphPreview" style="max-width: 300px; margin-top: 20px;" /> -->
+
+        <h3>値段</h3>
+        <input type="text" id="cost">円
+
+        <hr>
+
+        <div id="buttonContainer">
+            <button id="save">登録</button>
+            <button id="clear">クリア</button>
+        </div>
+        <!-- Firebase JavaScript SDK -->
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-storage.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-messaging.js"></script>
+        <script src="https://unpkg.com/vue@3.0.0/dist/vue.global.prod.js"></script>
+
+        <script type="module" src="js/registration.js"></script>
+    </div>
+</body>
+
+</html>
